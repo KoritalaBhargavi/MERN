@@ -1,0 +1,43 @@
+<html>
+<style>
+	.gen
+	{
+		display:flex;
+		justify-content: space-evenly;
+		background-color:lightblue;
+	}
+	.first{
+		grid-template-columns: 1 fr 1fr;
+	}
+	.second{
+		grid-template-columns: 1 fr 1fr 1fr;
+	}
+	.thrid{
+		grid-template-columns: 1 fr 1fr 1fr 1fr;
+	}
+</style>
+<body>
+	<div class="gen" style="width:100%">
+		<div>home</div>
+		<div>about</div>
+		<div>more</div>
+	</div>
+	<div class ="first" style="width:100%">
+		<div style="float:left;width:50%;height:33.3%;background-color:green">GREEN</div>
+		<div style="float:left;width:50%;height:33.3%;background-color:yellow">YELLOW</div>
+	</div>
+	</div>
+	<div class ="second" style="width:100%">
+		<div style="float:left;width:33.3%;height:33.3%;background-color:red;align-text:center">RED</div>
+		<div style="float:left;width:33.3%;height:33.3%;background-color:darkorange;">ORANGE</div>
+		<div style="float:left;width:33.3%;height:33.3%;background-color:blue">BLUE</div>
+	</div>
+	<div class ="thrid" style="width:100%">
+		<div style="float:left;width:25%;height:33.3%;background-color:darkgrey;">GREY</div>
+		<div style="float:left;width:25%;height:33.3%;background-color:darkmagenta;">MAGENTA</div>
+		<div style="float:left;width:25%;height:33.3%;background-color:beige;">BEIGE</div>
+		<div style="float:left;width:25%;height:33.3%;background-color:darkgreen;">DARKGREEN</div>
+	</div>
+
+</body>
+</html>
