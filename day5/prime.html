@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Prime Number</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <input type="number" id="age" value="">
+  <button onclick="b()">Check</button>
+  <p id="testmatch"></p>
+
+  <script>
+    function b() {
+      var a = document.getElementById('age').value;
+      var flag = true;
+      if (a <= 1) {
+        flag = false;
+      } else {
+        for (var i = 2; i <= Math.sqrt(a); i++) {
+          if (a % i === 0) {
+            flag = false;
+            break;
+          }
+        }
+      }
+      document.getElementById('testmatch').innerHTML = flag ? "Prime" : "Not prime";
+    }
+  </script>
+</body>
+</html>
