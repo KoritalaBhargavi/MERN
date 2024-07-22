@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
+
+<p>The length of the string is:</p>
+<p id="demo"></p>
+
+<script>
+let text1= "   Hello world   ";
+let text2= "   Hello cat";
+document.getElementById("demo").innerHTML = text1.length;
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.at(5);
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.charAt(5);
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.charCodeAt(5);
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1[5];
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.slice(7,13);
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.substring(7,13);
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.substr(7,6);
+let text1= "   Hello world   ";
+document.getElementById("demo").innerHTML = text1.toUpperCase();
+let text2= "   Hello cat";
+document.getElementById("demo").innerHTML = text2.toLowerCase();
+</script>
+
+</body>
+</html>

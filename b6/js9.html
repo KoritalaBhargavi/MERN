@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Checker</title>
+</head>
+<body>
+    <!--input type="number" id="lemon1">
+    <input type="number" id="lemon2">
+    <input type="number" id="lemon3">
+    <input type="number" id="lemon4">
+    <input type="number" id="lemon5"-->
+    <button onclick="checkLemons()">Check</button>
+    <p id="result"></p>
+    <script>
+        function checkLemons() {
+            var a = 5,b=20,c=10,d=15,e=-5;
+            result=(a>b && a>c && a>d && a>e)?a:(b>c && b>d && b>e)?b:(c>d && c>e)?c:(d>e)?d:e;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
