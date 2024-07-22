@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: skyblue;
+}
+.first{
+    float:center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    text-align: left;
+    width:100%;
+}
+.second{
+    float:left;
+    text-align: center;
+    width:50%;
+    height:50%;
+}
+.third{
+    text-align:center;
+}
+.fourth{
+    float:center;
+}
+#b{
+    margin:0px 0px 0px 80px;
+    }
+#c{
+    margin:0px 0px 0px 58px;
+    }
+#d{
+    margin:0px 0px 0px 58px;
+    }
+#e{
+    margin:0px 0px 0px 30px;
+}
