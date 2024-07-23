@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+ <input type="number" id="li">
+ <button onclick="lf()">check </button>
+ <script>
+    function lf(){
+        const a=document.getElementById('li').value;
+        const b=Math.floor(Math.random() * 10) + 1;
+        if(a==b){
+            document.write("lucky");
+        }
+        else{
+            document.write("not lucky");
+        }
+    } 
+</script>
+</body>
+</html>
