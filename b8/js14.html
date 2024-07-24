@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<script src="lform.js"></script>
+</head>
+<style>
+	body{
+		background-color: lavender;
+	}
+	form li {
+list-style: none;
+margin-bottom: 5px;
+}
+	.first{
+    		float:center;
+		grid-template-columns: 1 fr 1fr;
+    		justify-content:space-evenly;
+	}
+	#b{
+	margin-right:30px;
+	}
+	form ul li label{
+float: left;
+clear: left;
+width: 100px;
+text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+</style>
+<body>
+<form name='reg' class="first" onSubmit="return formValidation();">
+	<h1 style="text-align:left ;">Login</h1>
+	<ul>
+		<li><label for="username">Name:</label></li>
+		<li><input type="text" id="b" name="username" size="30" /></li>
+		<li><label for="email">Email:</label></li>
+		<li><input type="email" id="b" name="email" size="30" /></li>
+		<li><label for="passid" >Password:</label></li>
+		<li><input type="password" id="b" name="passid" size="12" /></li>
+		<li><label for="country">Country:</label></li>
+		<li><select name="country" id="b">
+			<option selected="" value="Default">(Please select a country)</option>
+			<option value="1">Australia</option>
+			<option value="2">Canada</option>
+			<option value="3">India</option>
+			<option value="4">Russia</option>
+			<option value="5">USA</option>
+	</select></li>
+		<li><label id="gender">do you have passport</label></li>
+		<li><input type="radio" name="ms" value="yes" checked/><span>yes</span></li>
+		<li><input type="radio" name="ms" value="no" /><span>no</span></li>
+		<li><input type="submit" name="submit" value="Submit" /></li>
+	</ul>
+</form>
+</body>
+</html>
