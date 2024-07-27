@@ -1,0 +1,14 @@
+show dbs
+use ciet
+ show collections
+db.customer.find()
+db.customer.insertOne({_id:1,name:"nandini",age:20,dob:"2003-09-07"})
+db.customer.insertOne({_id:2,name:"arjun",age:20,dob:"2003-06-07"})
+db.customer.insertMany([{_id:3,name:"samatha",age:72,dob:'1990-12-12'},{_id:4,name:"anjali",age:'20',dob:'2004-04-12'},{_id:5,name:"vaishnavi",age:20,dob:'2003-07-07'}])
+db.customer.updateOne({name:"arjun"},{$set:{address:"palnadu",email:"arjun@gmail.com"}})
+db.customer.updateMany({},{$set:{address:"guntur",email:"nandini@gmail.com"}},{$set:{address:"palnadu",email:"arjun@gmail.com"}},)
+db.customers.updateMany({age:{$lt:50},{$set:{address:"karnataka"}},)
+db.customers.updateMany({age:{$gt:50}},{$set:{address:"karnataka"}},)
+db.customer.updateOne({_id:2},{$set:{salary:10000}})
+db.customer.updateOne({_id:3},{$set:{salary:20000}})
+db.customer.updateMany({},{$inc:{salary,2000}}})
