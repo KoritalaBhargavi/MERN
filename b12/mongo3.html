@@ -1,0 +1,19 @@
+db.student.aggregate([{$group:{_id:null,mini:{$min:"$age"},maxi:{$max:"$age"}}}])
+db.student.aggregate([{$group:{_id:null,mini:{$min:"$salary"},maxi:{$max:"$salary"}}}])
+db.student.aggregate([{$group:{_id:null,avgsal:{$avg:"$salary"}}}])
+db.student.aggregate([{$group:{_id:null,mini:{$min:"$salary"},maxi:{$max:"$salary"},avgsal:{$avg:"$salary"}}}])
+db.student.aggregate([{$group:{_id:null,mini:{$min:"$salary"},maxi:{$max:"$salary"},avgsal:{$avg:"$salary"},totalsal:{$sum:"$salary"}}}])
+use admin
+switched to db admin
+db.createUser({user:"superadmin",pwd:"12345",roles:[{role:"userAdminAnyDatabase",db:"admin"},"readWriteAnyDatabase"]})
+db.createUser({user:"clerkadmin",pwd:"12345",roles:[{role:"userAdminAnyDatabase",db:"admin"},"readWriteAnyDatabase"]})
+db.createUser({user:"accountadmin",pwd:"12345",roles:[{role:"userAdminAnyDatabase",db:"admin"},"readWriteAnyDatabase"]})
+db.getUsers()
+
+
+
+
+
+
+
+
