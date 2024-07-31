@@ -1,0 +1,26 @@
+db.employees.aggregate([
+  { $match: { salary: { $gt: 60000 } } }
+])
+db.employees.aggregate([
+  { $group: { _id: "$department", averageSalary: { $avg: "$salary" } } }
+])
+db.employees.aggregate([
+  { $limit: 3 }
+])
+db.employees.aggregate([
+  { $lookup: {
+      from: "departments",
+      localField: "department",
+      foreignField: "_id",
+      as: "departmentDetails"
+    }
+  }
+])
+db.employees.aggregate([
+  { $group: { _id: "$department", averageSalary: { $avg: "$salary" } } },
+  { $merge: "employee_summary" }
+])
+db.employees.aggregate([
+  { $group: { _id: "$department", totalSalary: { $sum: "$salary" } } },
+  { $out: "employee_report" }
+])
