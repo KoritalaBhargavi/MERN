@@ -1,0 +1,4 @@
+db.createRole({ role:"userAdminAnyDatabase", privileges:[{ resource:{ db:"ciet", collection:""}, actions:["find","update","insert","remove"]}], roles:[]});
+db.getRoles()
+db.createRole({ role:"balajiAnyDatabase", privileges:[{ resource:{ db:"ciet", collection:""}, actions:["find","update","insert","remove"]}], roles:[]});
+db.getRoles()
