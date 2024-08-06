@@ -16,7 +16,7 @@ User.getJoinData = async function() {
             $lookup: {
                 from: 'dept',
                 localField: 'dept_id',
-                foreignField: 'dept_id',
+                foreignField: '_id',
                 as: 'departmentDetails'
             }
         }
