@@ -25,7 +25,7 @@ class Apple extends React.Component{
       <div id="login" style={{display: 'block'}}>
     <form name="login" >
         <h1>Login</h1>
-        <ul>
+        <ul style={{listStyleType:'none'}}>
             <li><label htmlFor="email" id="email">Email:</label></li>
             <li><input type="email" name="email" size="30" required /></li>
             <li><label htmlFor="passid" id="passid">Password:</label></li>
@@ -52,7 +52,7 @@ class Banana extends React.Component{
       <div id="registration" style={{display: 'none'}}>
     <form name="registration" >
         <h1>Registration</h1>
-        <ul>
+        <ul style={{listStyleType:"none"}}>
             <li><label htmlFor="email">Email:</label></li>
             <li><input type="email" name="email" size="30" required /></li>
             <li><label htmlFor="passid">Password:</label></li>
@@ -92,7 +92,7 @@ class Pine extends React.Component{
       <div id="pwdrst" style={{display: 'none'}}>
     <form name="pwdrst" >
         <h1>Password Reset</h1>
-        <ul>
+        <ul style={{listStyleType:'none'}}>
             <li><label htmlFor="email">Email:</label></li>
             <li><input type="email" name="email" size="30" required /></li>
             <li><label htmlFor="passid">New Password:</label></li>
