@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -39,39 +39,83 @@
 .container
 {
   display: flex;
+}*/
+
+.App {
+  textAlign: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointEvents: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  backgroundColor: #282c34;
+  minHeight: 100vh;
+  display: flex;
+  flexDirection: column;
+  alignItems: center;
+  justifyContent: center;
+  fontSize: calc(10 + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container
+{
+  display: flex;
 }
  h1 {
-            margin-left: 70px;
+            marginLeft: 70;
         }
         form {
             margin: 10% 30%;
         }
         form ul li {
-            list-style: none;
-            margin-bottom: 5px;
+            listStyle: none;
+            marginBottom: 5;
         }
         form ul li label {
             float: left;
             clear: left;
-            width: 100px;
-            text-align: center;
-            margin-right: 10px;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            width: 100;
+            textAlign: center;
+            marginRight: 10;
+            fontFamily: Verdana, Arial, Helvetica, sans-serif;
+            fontSize: 14;
         }
         [type="submit"] {
             clear: left;
-            margin: 20px 0 0 30px;
-            font-size: 18px;
+            margin: 20 0 0 30;
+            fontSize: 18;
         }
         p {
-            margin-left: 20%;
-            font-weight: bold;
+            marginLeft: 20;
+            fontWeight: bold;
         }
+        
         #customers {
-  padding-top: 10%;
-  padding-bottom: 30%;
-  text-align: left;
+  paddingTop: 10%;
+  paddingBottom: 30%;
+  textAlign: left;
 }
 #customers td, #customers th {
   border: 1px solid black;
