@@ -1,0 +1,46 @@
+.myclass
+{
+  color:yellow;
+}
+#customers{
+  background-color:skyblue;
+  border: solid black;
+  margin: auto;
+  
+}
+th{
+  border: solid black;
+  color:blue;
+}
+td{
+  border: solid black;
+}
+ #pink {
+  
+  border: solid black;
+  color:pink;
+}
+#red {
+  
+  border: solid black;
+  color:red;
+}
+#yellow {
+  
+  border: solid black;
+  color:yellow;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
