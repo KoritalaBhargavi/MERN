@@ -30,28 +30,36 @@ const formvalidation = (event) => {
     const calls = parseInt(event.target.calls.value);
     const msg = parseInt(event.target.msg.value);
     const data = parseFloat(event.target.data.value);
-
+  const rc = 3000 - calls;
+    const rm = 300 - msg;
+    const rd = 2.0 - data;
+  const r=84-days;
     if (days > 84) {
-      alert('Days cannot exceed 84 days!');
+      alert("your plan expired,please recharge");
       return;
     }
+  else {
+    alert(" $(r) days left " );
+  }
 
     if (calls > 3000){
       alert('Your calls exceeded the limit');
-      return;
     }
+  else {
+    alert("yet to calls $(rc)");
+  }
      if(msg > 300 ){
-      alert('Your sms exceeded')
+      alert('Your sms exceeded');
      }
+  else{
+    alert("yet to messages $(rm)");
+  }
      if(data > 2){
       alert('your data limit exceeded')
-     } 
-
-    const rc = 3000 - calls;
-    const rm = 300 - msg;
-    const rd = 2.0 - data;
-
-    alert(`Remaining Calls: ${rc}\nRemaining Messages: ${rm}\nRemaining Data: ${rd} GB`);
+     }
+  else {
+    alert("yet to data usage $(rd)");
+  }
   };
 }
 
