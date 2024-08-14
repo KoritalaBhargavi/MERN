@@ -1,0 +1,26 @@
+{
+  "name": "mern-project",
+  "version": "1.0.0",
+  "description": "mern related project",
+  "main": "server.js",
+
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client"
+},
+  "keywords": [
+    "mongoose",
+    "cors",
+    "body-parser",
+    "passport",
+    "passport-local"
+  ],
+  "author": "Bhargavi",
+  "license": "ISC",
+  "Dependencies":{},
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^2.0.15"
+  }
+}
