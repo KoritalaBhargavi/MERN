@@ -1,26 +1,22 @@
-db.employees.aggregate([
-  { $match: { salary: { $gt: 60000 } } }
+db.customer.aggregate([
+    { $match: { age: { $gt: 30 } } }
 ])
-db.employees.aggregate([
-  { $group: { _id: "$department", averageSalary: { $avg: "$salary" } } }
+db.customer.aggregate([
+    { $group: { _id: "$age", count: { $sum: 1 } } }
 ])
-db.employees.aggregate([
-  { $limit: 3 }
+db.customer.aggregate([
+    { $sort: { age: -1 } }
 ])
-db.employees.aggregate([
-  { $lookup: {
-      from: "departments",
-      localField: "department",
-      foreignField: "_id",
-      as: "departmentDetails"
+db.customer.aggregate([
+    { $limit: 5 }
+])
+db.customer.aggregate([
+    {
+        $lookup: {
+            from: "orders",
+            localField: "_id",
+            foreignField: "customerId",
+            as: "orderDetails"
+        }
     }
-  }
-])
-db.employees.aggregate([
-  { $group: { _id: "$department", averageSalary: { $avg: "$salary" } } },
-  { $merge: "employee_summary" }
-])
-db.employees.aggregate([
-  { $group: { _id: "$department", totalSalary: { $sum: "$salary" } } },
-  { $out: "employee_report" }
 ])
