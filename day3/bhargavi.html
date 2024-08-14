@@ -1,54 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-</style>
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <style>
+    .navbar-nav .nav-link,
+    .navbar-brand,
+    .btn-outline-body-color {
+      color: white !important;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .my-container {
+      display:flex;
+      justify-content: space-evenly;
+      padding: 3rem;
+      height:500px; 
+      align-items: center;
+      justify-content: center;
+    }
+    .my-container img {
+      width: 200%; 
+      height: 100%; 
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-  <div class="container p-5 my-5 border bg-warning">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+  <div class="container-fluid border bg-primary">
+    <div class="cols">
+    <div class="logo"><img src="https://bootstrapmade.com/assets/img/logo.png" width="15%"/></div>
+  </div>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BHARGAVI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Dropdown1</a></li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Deep Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Deep Dropdown1</a></li>
+                  <li><a class="dropdown-item" href="#">Deep Dropdown2</a></li>
+                  <li><a class="dropdown-item" href="#">Deep Dropdown3</a></li>
+                  <li><a class="dropdown-item" href="#">Deep Dropdown4</a></li>
+                  <li><a class="dropdown-item" href="#">Deep Dropdown5</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Dropdown2</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown3</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown4</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-light" style="background-color: skyblue; color: white; border-color: white;" type="submit">Get started</button>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid my-container p-5 my-3 bg-primary">
+    <div class="row p-5 my-5">
+      <div class="col-md-6 text-center my-5">
+        <h3 class="text-white"><b>Better Solutions For</b></h3>
+        <h3 class="text-white"><b>Your Business</b></h3>
+        <p class="text-white"><b>We are a team of designers making websites with Bootstrap</b></p>
+        <button class="btn btn-outline-light" style="background-color: skyblue; color: white; border-color: white;" type="submit">Get started</button>
+        <button class="btn btn-outline-light" style="color: white;" type="submit"><i class="fa fa-stop-circle-o" aria-hidden="true">Watch video</i></button>
+      </div>
+      <div class="col-md-6 p-0 text-center">
+        <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/hero-img.png" class="img-fluid"/>
+      </div>
     </div>
   </div>
-</nav>
-</div>
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Indicators/dots -->
   <div class="carousel-indicators">
@@ -60,97 +119,517 @@
   <!-- The slideshow/carousel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="fea.jfif" alt="Los Angeles" class="d-block w-100">
+      <img src="assets/img/clients/client-5.png" alt="Los Angeles" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="eiffel.jfif" alt="Chicago" class="d-block w-100">
+      <img src="assets/img/clients/client-2.png" alt="Chicago" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="sunset.jfif" alt="New York" class="d-block w-100">
+      <img src="assets/img/clients/client-7.png" alt="New York" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/clients/client-1.png" alt="New York" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/clients/client-6.png" alt="New York" class="d-block w-100">
+    </div>
+  </div></div><br>
+    
+  <div class="container-fluid p-5">
+    <h1 class="text-center"><b>About Us</b></h1>
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul class="list-unstyled text-left">
+          <li><i class="fa fa-check" aria-hidden="true"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Ullamco laboris nisi ut aliquip ex ea commodo.</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="btn btn-outline-light" style="background-color: skyblue; color: white; border-color: white;" type="button">
+          Read More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid p-5 ">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <h4 style="color:blue;">Eum ipsam laborum deleniti velit pariatur architecto aut nihil</h4>
+        <p style="color:grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.</p>
+        <div class="dropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Non consectetur a erat nam at lectus urna duis?
+          </button>
+          <ul class="dropdown-menu">
+            <li><p class="dropdown-item">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></li>
+          </ul>
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+          </button>
+          <ul class="dropdown-menu">
+            <li><p class="dropdown-item">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p></li>
+          </ul>
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dolor sit amet consectetur adipiscing elit pellentesque?
+          </button>
+          <ul class="dropdown-menu">
+            <li><p class="dropdown-item">Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis.</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS97aX6dI3-1e-M965NIk69aYgOTCvJJam6UA&s" width="100%" height="100%" alt="Illustration">
+      </div>
+    </div>
+  </div>
+  
+       <div class="container-fluid p-5">
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/skills.png" alt="Skills Image" class="img-fluid"/>
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+        <div class="text-center">
+          <h3 class="text-primary">Voluptatem dignissimos provident quasi corporis voluptas</h3>
+          <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-<div class="container-fluid p-5 my-5 bg-info text-white">
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["HTML", "CSS", "JavaScript", "Photoshop"],
+        datasets: [{
+          label: 'Proficiency',
+          backgroundColor: ["blue", "blue", "blue", "blue"],
+          data: [100, 90, 75, 55],
+          barThickness: 10,
+          maxBarThickness: 20
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        plugins: {
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text: "Skill Proficiency"
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Proficiency (%)'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Skills'
+            }
+          }
+        }
+      }
+    });
+  </script>
+  <h3 style="text-align:center">SERVICES</h3>
+  <p style="text-align:center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  <div class="container-fluid p-5 my-5 bg-info text-white">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-lg-3 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="fea.jfif" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">CA App Landing</h4>
           <p class="card-text">CA is a free Bootstrap 4 HTML5 app landing page template. It is a minimal and modern looking landing page template for Android and iOS mobile app showcase.</p>
-          <a href="#" class="btn btn-primary">open</a>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-3 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="eiffel.jfif" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">wikipedia</h4>
-          <p class="card-text">Wikipedias are places where people work together to write encyclopedias in different languages. We use Simple English words and grammar here.</p>
-          <a href="#" class="btn btn-primary">open</a>
+          <h4 class="card-title">Wikipedia</h4>
+          <p class="card-text">Wikipedias are places where people work together to write encyclopedias in different languages. We use Simple English words and grammar here.This where people work together.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-3 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="sunset.jfif" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">geeksforgeeks</h4>
+          <h4 class="card-title">GeeksforGeeks</h4>
           <p class="card-text">GeeksforGeeks is a platform that provides computer science resources and coding challenges for programmers along with interview and exam preps for aspirants</p>
-          <a href="#" class="btn btn-primary">open</a>
         </div>
       </div>
     </div>
-  </div>
-</div>
-  </div>
-  <div class="container-fluid p-5 my-5 bg-info text-white">
-  <div class="row">
-    <div class="col-md-4">
+    <div class="col-lg-3 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="fea.jfif" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">Breezee</h4>
-          <p class="card-text">Breezee is a new tab extension that lets you save links, take notes, create to-do lists, and keep it all organized by project</p>
-          <a href="#" class="btn btn-primary">open</a>
+          <p class="card-text">Breezee is a new tab extension that lets you save links, take notes, create to-do lists, and keep it all organized by projects. It is a new tab extension which let's you save links,etc..</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-4 my-3">
+            <div class="row">
+                <div class="col-md-8">
+                  <h3 style="text-align:center">Call To Action</h3>
+                    <p style="text-align:left">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      <div class="col-md-4" style="align-content: center;">
+                    <button style="background-color:dodgerblue;color:white;">Click Me</button></p></div>
+                </div>
+            </div>
+    </div>
+    <div class="container-fluid p-5 my-5">
+  <div class="row">
+    <!-- First Column -->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">APP1</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP2</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second Column -->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP3</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP4</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP5</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP6</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP7</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP8</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card" style="width: 100%;">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">APP9</h5>
+              <p class="card-text">Lorem ipsum, dolor sit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+    <h2 class="text-center mb-5">Team</h2>
+    <p class="text-center mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <div class="row mb-4">
+      <!-- First Card in First Row -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/team/team-1.jpg" class="card-img rounded-circle" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:royalblue;"><b>Walter White</b></h5>
+                <h7>Chief Executive Officer</h7>
+                <p class="card-text">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second Card in First Row -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/team/team-2.jpg" class="card-img rounded-circle" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:royalblue;"><b>Sarah Jhonson</b></h5>
+                <h7>Product Manager</h7>
+                <p class="card-text">Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First Card in Second Row -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/team/team-3.jpg" class="card-img rounded-circle" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:royalblue;"><b>William Anderson</b></h5>
+                <h7>CTO</h7>
+                <p class="card-text">Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second Card in Second Row -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/team/team-4.jpg" class="card-img rounded-circle" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:royalblue;"><b>Amanda Jepson</b></h5>
+                <h7>Accountant</h7>
+                <p class="card-text">Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid p-5 my-5 bg-secondary ">
+      <h1 style="text-align:center;color:blue;"><b>Pricing</b></h1>
+      <p style="text-align:center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  <div class="row p-3">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title" style="color:blue;">Free Plan</h4>
+          <h1 style="color:skyblue"><sup>$</sup>0<sub style="color:grey">/month</sub></h1>
+          <p  style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Quam adipiscing vitae proin</p>
+            <p  style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Nec feugiat nisl pretium</p>
+            <p  style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Nulla at volutpat diam uteera</p>
+            <p  style="text-align: center;"><strike><i class="fa fa-times" aria-hidden="true"></i>Pharetra massa massa ultricies</strike></p>
+            <p style="text-align: center;"><strike><i class="fa fa-times" aria-hidden="true"></i>Massa ultricies mi quis hendrerit</strike></p>
+          <a href="#" class="btn btn-grey">Buy Now</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="eiffel.jfif" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Zoho Mail</h4>
-          <p class="card-text">Zoho Mail gives you all the features you’ve come to expect from a modern email app and so much more</p>
-          <a href="#" class="btn btn-primary">open</a>
+          <h4 class="card-title" style="color:blue;">Business Plan</h4>
+          <h1 style="color:skyblue"><sup>$</sup>29<sub style="color:grey">/month</sub></h1>
+          <p  style="text-align: center;"><i class="fa fa-check" aria-hidden="true"></i>Quam adipiscing vitae proin</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Nec feugiat nisl pretium</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Nulla at volutpat diam uteera</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Pharetra massa massa ultricies</p> 
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>Massa ultricies mi quis hendrerit</p>
+          <a href="#" class="btn btn-info ">Buy Now</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="sunset.jfif" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title"> ZeroPC</h4>
-          <p class="card-text">It keeps you from filling up your phone or laptop with files and makes them accessible from anywhere</p>
-          <a href="#" class="btn btn-primary">open</a>
+          <h4 class="card-title" style="color:blue;">Devoloper Plan</h4>
+          <h1 style="color:skyblue"><sup>$</sup>49<sub style="color:grey">/month</sub></h1>
+          <p style="text-align: center;"><i class="fa fa-check" aria-hidden="true"></i>
+Quam adipiscing vitae proin</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>
+Nec feugiat nisl pretium</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>
+Nulla at volutpat diam uteera</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>
+Pharetra massa massa ultricies</p>
+            <p style="text-align: center;"><i class="fa fa-check" style="color:green" aria-hidden="true"></i>
+Massa ultricies mi quis hendrerit</p>
+          <a href="#" class="btn btn-grey">Buy Now</a>
         </div>
       </div>
     </div>
   </div>
 </div>
   </div>
-  <div class="container-fluid p-5 my-5 bg-info text-white">
+  <div class="container-fluid">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/testimonials/testimonials-1.jpg" class="d-block rounded-circle" alt="..." style="display: block ;margin-left: auto; margin-right: auto; width: 200px; height: auto;">
+          <h5 style="text-align: center;color:blue"><b>Saul Goodman</b></h5>
+          <pre style="text-align: center;color:grey">CEO&Founder
+<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></pre>
+        </div>
+        <div class="carousel-item">
+          <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/testimonials/testimonials-2.jpg" class="rounded-circle" alt="..." style="display: block; margin-left: auto; margin-right: auto; width: 200px; height: auto;">
+          <h5 style="text-align: center;color:blue"><b>Sara Wilsson</i></b></h5>
+          <pre style="text-align: center;color:grey">Desiner
+<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></pre>
+        </div>
+        <div class="carousel-item">
+          <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/testimonials/testimonials-3.jpg" class="rounded-circle" alt="..." style="display: block; margin-left: auto; margin-right: auto; width: 200px; height: auto;">
+          <h5 style="text-align: center;color:blue"><b>Jana Karlis</b></h5>
+          <pre style="text-align: center;color:grey">Store Owner
+<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></pre>
+        </div>
+        <div class="carousel-item">
+          <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/testimonials/testimonials-4.jpg" class="rounded-circle" alt="..." style="display: block; margin-left: auto; margin-right: auto; width: 200px; height: auto;">
+          <h5 style="text-align: center;color:blue"><b>Matt Brandon</b></h5>
+          <pre style="text-align: center;color:grey">Freelancer
+<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></pre>
+        </div>
+        <div class="carousel-item">
+          <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/testimonials/testimonials-5.jpg" class="rounded-circle" alt="..." style="display: block; margin-left: auto; margin-right: auto; width: 200px; height: auto;">
+          <h5 style="text-align: center;color:blue"><b>John Larson</b></h5>
+          <pre style="text-align: center;color:grey">Entreuprenuer
+<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></pre>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</div>
+<div class="container-fluid p-4 my-3 bg-secondary" style="text-align:center;">
+        <h3 style=" text-align:center;color:blue;">FREQUENTLY ASKED QUESTIONS</h3>
+        <p style="text-align:center;color:white">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <div class="dropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+            Non consectetur a erat nam at lectus urna duis?
+          </button>
+          <ul class="dropdown-menu">
+            <li><p class="dropdown-item">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></li>
+          </ul>
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+          </button>
+          <ul class="dropdown-menu">
+            <li><p class="dropdown-item">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p></li>
+          </ul>
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dolor sit amet consectetur adipiscing elit pellentesque?
+          </button>
+          <ul class="dropdown-menu">
+            <li><p class="dropdown-item">Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis.</p></li>
+          </ul>
+        </div>
+    </div>
+    <div class="container-fluid p-5 my-5 bg-info text-white">
+      <h1 style="text-align:center;color:blue"><b>Contact</b></h1>
+      <p style="text-align:center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-lg-6">
+      <h3 style="color:blue">Address</h3>
+      <p style="color:grey"><i class="fa fa-map-marker" style="color:blue" aria-hidden="true"></i>
+A108 Adam Street, New York, NY 535022</p>
+      <h3 style="color:blue"><i class="fa fa-phone" style="color:blue" aria-hidden="true"></i>
+Call Us</h3>
+      <p style="color:grey">+1 5589 55488 55</p>
       <div class="map">
             <!-- Embed a map here. For example, using Google Maps: -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.255363612505!2d-122.4194156846816!3d37.77492927975908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808581b3a7e0f3c7%3A0x6e6f8e23b93d61!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1634535668202!5m2!1sen!2sin" 
@@ -161,9 +640,11 @@
                 loading="lazy"></iframe>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-6">
       <form>
   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="exampleInputname1">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
@@ -180,36 +661,164 @@
 </form>
     </div>
   </div></div>
-  <div class="cantainer">
-    <footer class="text-center text-white" style="background-color: #45637d;">
+  <footer class="bg-body-tertiary text-center">
   <!-- Grid container -->
-  <div class="container p-4">
-    <!-- Section: Iframe -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Form -->
     <section class="">
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9">
-            <iframe
-              class="shadow-1-strong rounded"
-              src="https://www.youtube.com/embed/vlDzYIIOYmM"
-              title="YouTube video"
-              allowfullscreen
-            ></iframe>
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
           </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form5Example26" class="form-control" />
+              <label class="form-label" for="form5Example26">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
         </div>
-      </div>
+        <!--Grid row-->
+      </form>
     </section>
-    <!-- Section: Iframe -->
+    <!-- Section: Form -->
   </div>
   <!-- Grid container -->
+<!-- Footer -->
+</footer>
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>BHARGAVI
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
   <!-- Copyright -->
 </footer>
-  </div>
 </body>
 </html>
