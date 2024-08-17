@@ -1,0 +1,103 @@
+**reactpackages:-
+-->1.sublime-react:this  package is designed to enhance the development experience for React applications in the Sublime Text editor.
+
+  features:
+  1.Syntax Highlighting: Enhances the readability of your code by applying different colors to various elements of your React code and JSX (JavaScript XML).
+  2.Code Snippets:Provides pre-defined pieces of code that you can quickly insert into your files.
+  3. Linting and Formatting: Helps maintain code quality and consistency by automatically highlighting potential errors and enforcing coding standards.
+  4.Autocomplete: Improves coding efficiency by suggesting possible completions as you type.(promps)
+  5.project structure management: facilitates navigation and management of files regarding your project
+  6.customizability:can often customize the syntax highlighting rules to satisfy your needs regarding your project
+
+
+-->2.React-Router:it is helpful for handling routing in React Application.It allows you to manage navigation, render different components based on the URL,
+and create dynamic, single-page applications (SPAs) with multiple views.
+
+-->3.React-bootstrap:React Bootstrap is a popular library that provides a set of React components based on the Bootstrap framework. It allows developers to
+ use Bootstrap’s styles and components while leveraging React's component-based architecture and state management.
+
+-->4. Formik
+Package: formik
+Purpose: Simplifies form handling and validation in React applications.
+
+-->5.React Hook Form
+Package: react-hook-form
+Purpose: Provides a performant and flexible way to manage form state and validation using React hooks.
+
+
+
+
+**Diffrence b/w class and functional components :-
+ In React, components can be defined either as class components or functional components. Both serve
+ the purpose of creating reusable UI elements, but they differ in syntax, features, and usage. 
+
+--->Class components:
+ *Render method is mandatory while using class components.
+ *class components follow ES6 class extending "React.Component".
+ *Class components use this.state for state management and this.setState() to update state.
+ *Classcomponents are more verbose and complex compared to functional components 
+ *We can not use hooks concept while handling in Class components
+
+
+
+--->Functional components:
+ *There'sno need of render() whileusiong functional components.
+ *functional components follow JavaScript functions.
+ *Functional components use the useState hook for state management. State is managed with variables and functions returned by useState.
+ *Functional components are simpler and easy
+ *In Functional components we can use hooks concepts
+ *Function components are defined using the function keyword or arrow function syntax.
+
+
+**Purpose of render():-
+ Purpose of Render:
+ render() in the application using the declaration of HTML code and the HTML elementthat we want to compile or run. The goal of this function is to represent the
+ imposed HTML code within the specified HTML element tags. It helps to redirect the HTML page with the help of the render() function.
+
+**purpose of return():-
+  Purposeof return :
+  the return() in react is a way to return data from acomponent.it returns data that is passed into the component,which the parent component can then use.
+
+**Types of Hooks:-
+1.statehooks:-
+-->usestate:
+   it ismost coomonly used reacthook that allows components to have state variables.
+   it takes initial state value as argument and returns an array of 2 elements-current state value and a function to update that state.
+   Syntax: const [count, setcount] =useState(0);
+                   |        |
+                   |        ---------function 
+                    --------current state value
+-->useReducer:
+   it provides alternative to the useState for managing complex state logic involving multiple sub-values.
+
+
+**Diifrence between package.json and package-lock.json:-
+-->package.json: This file is primarily used for managing and documenting metadata about the project, 
+including its name, version, author, dependencies, scripts, and other configuration details. It acts as
+ a manifest for the project.
+
+-->package-lock.json: This file is generated and updated automatically by npm when installing or updating 
+packages. It is used to lock the exact versions of dependencies installed in the project, ensuring 
+reproducibility and consistent installations across different environments.
+
+
+
+**Diff between json and jsonp:
+  -->JSON:arrays and objects
+       {"name":"stackoverflow","id":5}
+  -->JSONP:JSONP is JSON with padding.Response is JSON data but with a function call wrapped around it.
+       func({"name":"stackoverflow","id":5});
+
+**What is meant by Vuejs:-
+  Vue.js is a free JavaScript framework for building interactive and dynamic user interfaces.
+  Vue.js is a powerful and versatile JavaScript framework that offers simplicity, flexibility, and high performance.
+ It provides developers with the tools they need to build modern and reactive web applications.
+
+**Diffrence between BSON and JSON:-
+  BSON is a binary-encoded format, whereas JSON is a text-based format. This means that BSON is compact
+ for transmitting over a network, while JSON is human-readable and easier to work with in various contexts.
+
+**Difference between Primary key and Foreign key:-
+-->A primary key is a unique identifier for each record in a table.
+-->A foreign key establishes a relationship between tables by referencing the primary key of another table.
+
